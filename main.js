@@ -8,6 +8,7 @@ rightWristscore=0;
 
 function preload(){
     song=loadSound("music.mp3");
+    song2=loadSound("music2.mp3")
 }
 
 function draw(){
@@ -17,34 +18,15 @@ function draw(){
 
     circle(right_wristX,right_wristY,25);
 
-    if(right_wristY>0 && right_wristY<=100){
-      document.getElementById("speed").innerHTML="Speed=0.5x";
-      song.rate(0.5)
+    if(right_wristY==2){
+      document.getElementById("speed").innerHTML="Song Name=Harry Potter";
+      song2.rate(0.5)
     } 
-      else if(right_wristY>100 && right_wristY<=200){
-        document.getElementById("speed").innerHTML="Speed=1x";
-        song.rate(1)
-      }
-      else if(right_wristY>200 && right_wristY<=300){
-        document.getElementById("speed").innerHTML="Speed=1.5x";
-        song.rate(1.5)
-      }
-      else if(right_wristY>300 && right_wristY<=400){
-        document.getElementById("speed").innerHTML="Speed=2x";
-        song.rate(2)
-      } 
-      else if(right_wristY>400 && right_wristY<=50000){
-        document.getElementById("speed").innerHTML="Speed=2.5x";
-        song.rate(2.5)
-      }
 
      if(leftWristscore>0.2){
        circle(left_wristX,left_wristY,20)
-       X=Number(left_wristY);
-       R=floor(X);
-       V=R/500;
-       document.getElementById("vol").innerHTML="Volume="+V;
-       song.setVolume(V);
+       document.getElementById("vol").innerHTML="Song name=";
+       song2.setVolume(V);
      }
 }
 
